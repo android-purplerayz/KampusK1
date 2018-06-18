@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ParentFeesActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:id="@+id/constrai_lloutPFessID"
+        android:background="#0E6672">
+
+        <Button
+            android:id="@+id/btnPFessBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_left_arrow_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textViewPFess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Fees"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textViewPFess1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/notify_tv_background"
+            android:gravity="center"
+            android:text="05"
+            android:textColor="@android:color/white"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.925"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.062" />
+
+        <Button
+            android:id="@+id/btnPFess2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_notification_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelloutFess"
+        android:layout_below="@+id/constrai_lloutPFessID"
+        android:layout_width="match_parent"
+        android:background="@drawable/fess_reolative_back"
+        android:layout_height="220dp">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:background="#407b7676"
+            android:layout_height="match_parent">
+
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/donut_progressFess"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                app:donut_text_color="@android:color/black"
+                app:donut_finished_color="#135864"
+                app:donut_finished_stroke_width="12dp"
+                app:donut_progress="80"
+                app:donut_unfinished_color="@android:color/holo_red_dark"
+                app:donut_unfinished_stroke_width="12dp" />
+
+            <TextView
+                android:id="@+id/tvFessdue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/donut_progressFess"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginBottom="-20dp"
+                android:text="Due: 1000"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:id="@+id/tvFessPaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginBottom="24dp"
+                android:text="Fees Paid: 1000"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/relativelloutFess"
+        android:layout_width="match_parent"
+        android:id="@+id/scrollViewFess"
+        android:layout_above="@+id/relativelloutfessbottom"
+        android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:padding="10dp"
+                android:id="@+id/recyclerViewFessID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+
+    </ScrollView>
+
+
+     <RelativeLayout
+         android:layout_above="@+id/relativelloutfessbottom1"
+         android:layout_width="match_parent"
+         android:layout_height="45dp"
+         android:background="#0E6672"
+         android:id="@+id/relativelloutfessbottom">
+
+         <TextView
+             android:id="@+id/tvFessTotal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentStart="true"
+             android:layout_alignParentLeft="true"
+             android:layout_centerVertical="true"
+             android:layout_marginStart="16dp"
+             android:layout_marginLeft="16dp"
+             android:drawableLeft="@drawable/ic_fees_total"
+             android:drawablePadding="10dp"
+             android:textColor="@android:color/white"
+             android:text="Total" />
+
+         <TextView
+             android:id="@+id/tvFesstotalamount"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentEnd="true"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginEnd="15dp"
+             android:layout_marginRight="15dp"
+             android:text="INR : 10000"
+             android:textColor="@android:color/white"
+             android:textStyle="bold" />
+
+     </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativelloutfessbottom1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="#16373A">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay Now"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+    </RelativeLayout>
+
+</RelativeLayout>

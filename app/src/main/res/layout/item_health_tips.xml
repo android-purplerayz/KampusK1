@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ImageHT"
+        android:layout_width="100dp"
+        android:src="@drawable/healthtips_photo"
+        android:scaleType="fitXY"
+        android:layout_height="80dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvHT1"
+        android:layout_width="246dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:lines="2"
+        android:maxLines="40"
+        android:text="Health and Wellness Tips for College "
+        android:textColor="#0E6672"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ImageHT"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="6dp" />
+
+    <TextView
+        android:id="@+id/tvHT2"
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:lines="2"
+        android:maxLines="40"
+        android:text="Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo."
+        android:textColor="#014D59"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toEndOf="@+id/ImageHT"
+        app:layout_constraintTop_toBottomOf="@+id/tvExamDes"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
+</android.support.constraint.ConstraintLayout>

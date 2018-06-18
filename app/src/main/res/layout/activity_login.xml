@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/login_background"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/login_logo" />
+    <EditText
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginStart="40dp"
+        android:gravity="center"
+        android:inputType="phone"
+        android:textColor="#135864"
+        android:textColorHint="#135864"
+        android:background="@drawable/login_et_background"
+        android:hint="Enter mobile number"/>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:text="Get OTP"
+        android:id="@+id/btn_getOTP"
+        android:background="@drawable/login_btn_background"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/ic_floating_back_logo"
+        android:layout_gravity="bottom|right"/>
+
+</LinearLayout>

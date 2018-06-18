@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ParentDashboardActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:id="@+id/constrai_lloutIDDash"
+        android:background="#0E6672">
+
+        <Button
+            android:id="@+id/btndashgotoMainmenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_drawer_button_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView1dash"
+            app:layout_constraintHorizontal_bias="0.025"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textViewdash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Dashboard"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btndashcalender"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_calender_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btndash2"
+            app:layout_constraintHorizontal_bias="0.756"
+            app:layout_constraintStart_toEndOf="@+id/textViewdash"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView1dash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/notify_tv_background"
+            android:gravity="center"
+            android:text="05"
+            android:textColor="@android:color/white"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.925"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.062" />
+
+        <Button
+            android:id="@+id/btndash2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_notification_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView1dash"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:backgroundTint="#7b7373"
+                android:backgroundTintMode="multiply"
+                android:background="@drawable/p_dash_bach_photo">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="85dp"
+                    android:layout_height="82dp"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@android:color/white"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/photo_service" />
+
+
+                <TextView
+                    android:id="@+id/tv_email_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/btndasdMSG"
+                    android:layout_alignLeft="@+id/btndasdMSG"
+                    android:layout_alignBottom="@+id/btndasdMSG"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginBottom="34dp"
+                    android:text="20"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btndasdMSG"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="76dp"
+                    android:layout_marginLeft="76dp"
+                    android:layout_marginTop="48dp"
+                    android:background="@drawable/ic_dash_msg_logo" />
+
+
+                <TextView
+                    android:id="@+id/tv_msg_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_email_num"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="86dp"
+                    android:layout_marginRight="86dp"
+                    android:text="20"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btndasdEmail"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_below="@+id/btndasdMSG"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginEnd="79dp"
+                    android:layout_marginRight="79dp"
+                    android:background="@drawable/ic_dash_icon_email" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvIdnum"
+                    android:layout_alignStart="@+id/tvIdnum"
+                    android:layout_alignLeft="@+id/tvIdnum"
+                    android:layout_marginStart="-3dp"
+                    android:layout_marginLeft="-3dp"
+                    android:layout_marginBottom="6dp"
+                    android:text="Aditi Rao"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tvIdnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="81dp"
+                    android:text="ABC1023"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/btnX"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignEnd="@+id/tv_email_num"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="-14dp"
+                    android:text="X"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="17dp"
+                    android:background="@drawable/round_btn_background"
+                    android:layout_alignRight="@+id/tv_email_num"
+                    android:layout_marginRight="-14dp" />
+
+                <Button
+                    android:id="@+id/btnA"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignEnd="@+id/btndasdEmail"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="-3dp"
+                    android:layout_marginBottom="17dp"
+                    android:background="@drawable/round_btn_background"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textColor="@android:color/white"
+                    android:layout_alignRight="@+id/btndasdEmail"
+                    android:layout_marginRight="-3dp" />
+
+                <Button
+                    android:id="@+id/btn10"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="192dp"
+                    android:layout_marginBottom="17dp"
+                    android:background="@drawable/round_btn_background"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="3dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:background="@drawable/dash_holiday_back"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvHoli1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Available Holidays"
+                        android:textColor="@android:color/white" />
+
+                    <ImageView
+                        android:id="@+id/imageholi2"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginBottom="22dp"
+                        android:src="@drawable/ic_holiday_photo" />
+
+                    <TextView
+                        android:id="@+id/tvholi2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="92dp"
+                        android:layout_marginLeft="92dp"
+                        android:layout_marginBottom="23dp"
+                        android:text="20/34"
+                        android:textColor="@android:color/white" />
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:background="@drawable/dash_transport_back"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/tvtrans1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="19dp"
+                        android:text="Transprot Available"
+                        android:textColor="@android:color/white" />
+
+                    <ImageView
+                        android:id="@+id/imagetrans2"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginBottom="22dp"
+                        android:src="@drawable/ic_travel_photo" />
+
+                    <TextView
+                        android:id="@+id/tvtrans2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/tvtrans1"
+                        android:layout_alignBottom="@+id/imagetrans2"
+                        android:text="20/34"
+                        android:textColor="@android:color/white"
+                        android:layout_alignRight="@+id/tvtrans1" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:id="@+id/tvfees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="25dp"
+                    android:textSize="18dp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Pending fees(INR)" />
+                <ImageView
+                    android:id="@+id/imagefess"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginBottom="22dp"
+                    android:src="@drawable/ic_fees_logo" />
+                <TextView
+                    android:id="@+id/tvfess1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imagefess"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="110dp"
+                    android:layout_marginRight="110dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="1000"
+                    android:textColor="#135864"
+                    android:textSize="18dp" />
+
+                <com.github.lzyzsd.circleprogress.DonutProgress
+                    android:id="@+id/donut_progress"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:donut_finished_stroke_width="5dp"
+                    app:donut_unfinished_stroke_width="5dp"
+                    app:donut_finished_color="@android:color/holo_green_dark"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    app:donut_progress="80"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#918888"
+                android:layout_height="1dp">
+
+            </LinearLayout>
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:id="@+id/tvAttn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="25dp"
+                    android:textSize="18dp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Attendence" />
+                <ImageView
+                    android:id="@+id/imageAttn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginBottom="22dp"
+                    android:src="@drawable/ic_attendence_logo" />
+                <TextView
+                    android:id="@+id/tvAttn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageAttn"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="110dp"
+                    android:layout_marginRight="110dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="24/30"
+                    android:textColor="#135864"
+                    android:textSize="18dp" />
+
+                <com.github.lzyzsd.circleprogress.DonutProgress
+                    android:id="@+id/donut_progressAttn"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:donut_finished_stroke_width="5dp"
+                    app:donut_unfinished_stroke_width="5dp"
+                    app:donut_finished_color="@android:color/holo_red_dark"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    app:donut_progress="60" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#918888"
+                android:layout_height="1dp">
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:id="@+id/tvADS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="25dp"
+                    android:textSize="18dp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Academic success" />
+                <ImageView
+                    android:id="@+id/imageADS"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginBottom="22dp"
+                    android:src="@drawable/ic_ad_succes_logo" />
+
+
+                <com.github.lzyzsd.circleprogress.DonutProgress
+                    android:id="@+id/donut_progressADS"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    app:donut_finished_stroke_width="5dp"
+                    app:donut_unfinished_stroke_width="5dp"
+                    app:donut_finished_color="@android:color/holo_blue_light"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    app:donut_progress="40" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/llout_notic"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#03899C"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+
+                            android:id="@+id/imageNO"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="bottom"
+                            android:src="@drawable/ic_das_notish_logo" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <TextView
+
+                            android:id="@+id/tv_NO1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/tv_NO2"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="20/40"
+                            android:textSize="18dp"
+                            android:textColor="@android:color/white"
+                            android:layout_alignRight="@+id/tv_NO2" />
+
+                        <TextView
+                            android:id="@+id/tv_NO2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:text="Notice"
+                            android:textColor="@android:color/white"/>
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:id="@+id/LloutRequestID"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#4FBAA7"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageRQ"
+                            android:layout_width="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center|bottom"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_dash_request_logo"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvRQ1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/tvRQ2"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/white"
+                            android:text="20/40"
+                            android:textSize="18dp"
+                            android:layout_alignRight="@+id/tvRQ2" />
+
+                        <TextView
+                            android:id="@+id/tvRQ2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:text="Request"
+                            android:textColor="@android:color/white"
+                             />
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lloutabuse"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:background="#FD676A"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageAb"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center|bottom"
+                            android:src="@drawable/ic_dash_abuse_logo"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvAb1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/tvAb2"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/white"
+                            android:text="20/40"
+                            android:textSize="18dp"
+                            android:layout_alignRight="@+id/tvAb2" />
+
+
+
+                        <TextView
+                            android:id="@+id/tvAb2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Abuse"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/white"/>
+
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

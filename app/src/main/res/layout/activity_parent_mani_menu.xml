@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ParentManiMenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/login_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#90FFFFFF">
+    <Button
+        android:id="@+id/btngotoDashboard"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        android:background="@drawable/ic_drawer_button_icon"/>\
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:civ_border_color="#16373A"
+        app:civ_border_width="1dp"
+        app:civ_border_overlay="false"
+        android:layout_gravity="center"
+        android:src="@drawable/photo_service" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textColor="#16373A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aditi Rao"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="2dp">
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:columnCount="2"
+        android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="100dp"
+           android:layout_columnWeight="1"
+           android:gravity="center"
+           android:orientation="vertical"
+           android:layout_gravity="fill_horizontal">
+
+           <RelativeLayout
+               android:layout_width="70dp"
+               android:background="@drawable/main_menu_image_back"
+               android:layout_height="70dp">
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:layout_gravity="center"
+                   android:src="@drawable/ic_dashboard" />
+           </RelativeLayout>
+           <TextView
+               android:layout_marginTop="5dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Dashboard"
+               android:textColor="#135864"/>
+
+
+       </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:background="@drawable/main_menu_image_back"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_mm_student_profile" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student Profile"
+                android:textColor="#135864"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:background="@drawable/main_menu_image_back"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_mm_progress_logo" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Progress"
+                android:textColor="#135864"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:background="@drawable/main_menu_image_back"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_mm_attendence_logo" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attendence"
+                android:textColor="#135864"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:background="@drawable/main_menu_image_back"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_mm_transport_logo" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transport"
+                android:textColor="#135864"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:background="@drawable/main_menu_image_back"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_mm_timet_logo" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time-Table"
+                android:textColor="#135864"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lloutclassnotes"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:background="@drawable/main_menu_image_back"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_mm_classn_logo" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class Notes"
+                android:textColor="#135864"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:background="@drawable/main_menu_image_back"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_mm_exam_logo" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Examinations"
+                android:textColor="#135864"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lloutparentfees"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:background="@drawable/main_menu_image_back"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_fees_logo" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fess"
+                android:textColor="#135864"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+
+            <RelativeLayout
+                android:layout_width="70dp"
+                android:background="@drawable/abuse_back"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_mm_abuse_logo" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abuse"
+                android:textColor="#135864"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:layout_columnSpan="2"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+
+            <Button
+                android:id="@+id/btngotoservice"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_mainmenu_sent_logo" />
+
+        </LinearLayout>
+    </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="#0E6672"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ic_mm_settings" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ic_mm_qmark" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ic_mm_list"
+                    android:gravity="center" />
+
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".scholership.ScholerShipDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#0E6672"
+        android:id="@+id/toolbar_ScholerD"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnbackSchoD"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_left_arrow_profile"
+                android:layout_alignParentLeft="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Lalit Kala Academic ScholerShip"
+                />
+
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_ScholerD"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_bannerSchoD"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/scholer_back_pic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/img_joinSchoD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="@+id/img_bannerSchoD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_link"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/tv_descSchoD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="30dp"
+                android:text="@string/ipsum"
+                android:background="#51BCA9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_bannerSchoD" />
+
+            <ImageView
+                android:id="@+id/img_infoSchoD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_back_layout"
+                android:src="@drawable/ic_info"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_descSchoD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.025"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.396" />
+
+            <RelativeLayout
+                android:id="@+id/rl1SchoD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_descSchoD"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+
+                >
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="208dp"
+                    android:background="#068587"
+                    android:layout_marginLeft="33dp"
+                    />
+                <ImageView
+                    android:id="@+id/img_mapSchoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/ic_eli"
+                    android:layout_marginStart="8dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_locSchoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#014D59"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@+id/img_mapSchoD"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Eligibility"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_addressSchoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_locSchoD"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toRightOf="@+id/img_mapSchoD"
+                    android:gravity="start"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Women scientists, with a minimum of Post Graduate degree, equivalent to M.Sc. in Basic or Applied Sciences or B.Tech. or MBBS or other equivalent professional qualifications, are eligible for this scheme.
+** Maximum age limit is 35 years. The amount of fellowship for such candidates will be Rs. 20,000/- PM.
+" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl2SchoD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rl1SchoD"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+
+                >
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"
+                    android:background="#068587"
+                    android:layout_marginLeft="33dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_eveSchoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_guid"
+                    android:layout_marginTop="8dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_eventSchoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#014D59"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@+id/img_eveSchoD"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Guidlines"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_eventsSchoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Singning , Painting"
+                    android:layout_toRightOf="@+id/img_eveSchoD"
+                    android:layout_below="@+id/tv_eventSchoD"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl3SchoD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rl2SchoD"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+
+                >
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="130dp"
+                    android:background="#068587"
+                    android:layout_marginLeft="33dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_proSchoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_govern"
+                    android:layout_marginTop="8dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_prosSchoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@+id/img_proSchoD"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="#014D59"
+                    android:text="Governing Body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_processSchoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_prosSchoD"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toRightOf="@+id/img_proSchoD"
+                    android:gravity="start"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="i. written exam conducted by state/UT.
+                    ii. Students selected in state level exam appear for national level." />
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl4ED"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rl3SchoD"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="40dp"
+                    android:background="#068587"
+                    android:layout_marginLeft="33dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_govSchoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/ic_mail_drop"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_goveSchoD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="#014D59"
+                    android:text="Email"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/img_govSchoD"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_govern"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_goveSchoD"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toRightOf="@+id/img_govSchoD"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="biswarup@purplerayza.in" />
+
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

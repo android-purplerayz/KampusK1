@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ParentStuInfoActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:id="@+id/constrai_lloutIDStuInfo"
+        android:background="#0E6672">
+
+        <Button
+            android:id="@+id/btnStuInfogotoMainmenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_drawer_button_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView1dash"
+            app:layout_constraintHorizontal_bias="0.025"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textViewStuInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Profile"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_below="@+id/constrai_lloutIDStuInfo"
+        android:layout_width="match_parent"
+        android:id="@+id/scrollViewStuInfo"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/p_stuinfo_back"
+                android:layout_height="220dp">
+
+                <TextView
+                    android:id="@+id/tvStuInfo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="ABC School"
+                    android:textColor="#16373A" />
+
+                <Button
+                    android:id="@+id/btneditStuInfo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/tvStuInfo1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@drawable/ic_edit_logo" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageStudInfo1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/tvStuInfo1"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/photo_service" />
+
+                <TextView
+                    android:id="@+id/tvStuInfoName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="164dp"
+                    android:layout_marginLeft="164dp"
+                    android:layout_marginTop="143dp"
+                    android:text="Aditi Rao"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvStuInfoName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tvStuInfoName1"
+                    android:layout_toEndOf="@+id/tvStuInfoName1"
+                    android:text="(AB+)"
+                    android:textColor="@android:color/white"
+                    android:layout_toRightOf="@+id/tvStuInfoName1"/>
+
+                <TextView
+                    android:id="@+id/tvStuInfoID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="29dp"
+                    android:text="Student Id: ABC002"
+                    android:textColor="#16373A" />
+
+
+                <ImageView
+                    android:id="@+id/imageStuInfoQR"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_qr_logo"
+                    android:layout_alignEnd="@+id/btneditStuInfo"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_alignRight="@+id/btneditStuInfo" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="40dp">
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:background="#90000000"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:text="Class: X"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="2dp"
+                    android:background="@drawable/p_stuinfo_back"
+                    android:layout_height="match_parent">
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:background="#90000000"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Class: X"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageFatherStudentInfo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginLeft="19dp"
+                    android:src="@drawable/father" />
+
+                <TextView
+                    android:id="@+id/tvFatherOccupation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imageFatherStudentInfo"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toEndOf="@+id/imageFatherStudentInfo"
+                    android:text="Development Lead"
+                    android:textColor="#666666"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imageFatherStudentInfo" />
+
+                <TextView
+                    android:id="@+id/tvfatherPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/tvFatherOccupation"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="10dp"
+                    android:textColor="#135864"
+                    android:drawableLeft="@drawable/ic_call_icon"
+                    android:text="7906064569"
+                    android:layout_alignLeft="@+id/tvFatherOccupation" />
+
+                <TextView
+                    android:id="@+id/fatherEmailTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/tvFatherOccupation"
+                    android:layout_alignBottom="@+id/imageFatherStudentInfo"
+                    android:drawableLeft="@drawable/ic_father_email_logo"
+                    android:drawablePadding="10dp"
+                    android:text="biswarup2015@gmail.com"
+                    android:textColor="#135864"
+                    android:layout_alignLeft="@+id/tvFatherOccupation" />
+
+
+                <TextView
+                    android:id="@+id/tvFather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imageFatherStudentInfo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="-12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    android:text="Father"
+                    android:textColor="#135864" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Debashis Rao"
+                    android:textColor="#135864"
+                    android:textStyle="bold"
+                    android:id="@+id/tvfatherNAme"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
