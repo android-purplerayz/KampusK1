@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.android2.kampuskannekt.Award.AwardActivity;
 import com.example.android2.kampuskannekt.ExamResult.ExamResults;
 import com.example.android2.kampuskannekt.HealthTips.HealthTipsActivity;
 import com.example.android2.kampuskannekt.scholership.ScholershipActivity;
@@ -20,7 +21,7 @@ import ngo.NGO;
 public class ServicesActivity extends AppCompatActivity implements View.OnClickListener{
 
     ImageView img_enter_school, img_epaper, img_ebook, img_ngo;
-    LinearLayout lloutschoolandUni,lloutVideos,lloutExamRes,lloutScholership,lloutHealttips;
+    LinearLayout lloutschoolandUni,lloutVideos,lloutExamRes,lloutScholership,lloutHealttips,lloutAward;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class ServicesActivity extends AppCompatActivity implements View.OnClickL
     public void setViews(){
         lloutschoolandUni=findViewById(R.id.lloutschoolandUni);
         lloutHealttips=findViewById(R.id.lloutHealttips);
+        lloutAward=findViewById(R.id.lloutAward);
         lloutScholership=findViewById(R.id.lloutScholership);
         lloutVideos=findViewById(R.id.lloutVideos);
         img_enter_school = findViewById(R.id.img_enter_school);
@@ -47,6 +49,7 @@ public class ServicesActivity extends AppCompatActivity implements View.OnClickL
 
     public void setListeners(){
         lloutschoolandUni.setOnClickListener(this);
+        lloutAward.setOnClickListener(this);
         lloutHealttips.setOnClickListener(this);
         lloutVideos.setOnClickListener(this);
         img_enter_school.setOnClickListener(this);
@@ -96,6 +99,9 @@ public class ServicesActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.lloutHealttips:
                 startActivity(new Intent(ServicesActivity.this,HealthTipsActivity.class));
+                break;
+            case R.id.lloutAward:
+                startActivity(new Intent(ServicesActivity.this,AwardActivity.class));
                 break;
         }
     }

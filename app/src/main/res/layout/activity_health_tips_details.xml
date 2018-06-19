@@ -4,6 +4,205 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".HealthTips.HealthTipsDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#0E6672"
+        android:id="@+id/toolbar_HTD"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnbackHTD"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_left_arrow_profile"
+                android:layout_alignParentLeft="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Health Tips"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/ScrollID1"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_HTD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+           <android.support.constraint.ConstraintLayout
+                android:id="@+id/relloutHTD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="48dp"
+                tools:ignore="MissingConstraints">
+
+               <ImageView
+                   android:id="@+id/imageView3"
+                   android:layout_width="70dp"
+                   android:layout_height="70dp"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginLeft="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:src="@drawable/image_back1"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:id="@+id/tv1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentTop="true"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginLeft="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginRight="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:text="Health and Wellness Tips for College "
+                   android:textColor="#014D59"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintHorizontal_bias="0.0"
+                   app:layout_constraintStart_toEndOf="@+id/imageView3"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintVertical_bias="0.019" />
+
+               <TextView
+                   android:id="@+id/tv2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignStart="@+id/tv1"
+                   android:layout_alignLeft="@+id/tv1"
+                   android:layout_centerVertical="true"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginLeft="8dp"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginRight="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:text="Student"
+                   android:textColor="#014D59"
+                   android:textStyle="bold"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toStartOf="@+id/tv3"
+                   app:layout_constraintHorizontal_bias="0.0"
+                   app:layout_constraintStart_toEndOf="@+id/imageView3"
+                   app:layout_constraintTop_toBottomOf="@+id/tv1"
+                   app:layout_constraintVertical_bias="0.521" />
+
+               <TextView
+                   android:id="@+id/tv3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/tv2"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginTop="8dp"
+                   android:layout_marginEnd="8dp"
+                   android:layout_marginRight="8dp"
+                   android:layout_marginBottom="8dp"
+                   android:text="Date: 18/06/2018"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+            </android.support.constraint.ConstraintLayout>
+            <RelativeLayout
+                android:id="@+id/relloutHTD1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toBottomOf="@+id/relloutHTD"
+                android:background="@drawable/stethos">
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relloutHTD2"
+                app:layout_constraintTop_toBottomOf="@+id/relloutHTD1"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tv9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac."/>
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/tv9"
+                    android:id="@+id/tv91"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arcu es massa"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tv92"
+                    android:layout_below="@+id/tv91"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi"/>
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/tv93"
+                    android:layout_below="@+id/tv92"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Nulla wisi"/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tv94"
+                    android:layout_below="@+id/tv93"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget."/>
+
+            </RelativeLayout>
+
+
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+
 
 </android.support.constraint.ConstraintLayout>

@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
@@ -153,6 +154,12 @@ public class HealthTipsActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull ViewHolder7 holder, int position) {
             holder.tvHT1.setText(healTips.get(position));
+            holder.ConsllouttoDetails.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(HealthTipsActivity.this,HealthTipsDetailsActivity.class));
+                }
+            });
 
         }
 
@@ -163,10 +170,12 @@ public class HealthTipsActivity extends AppCompatActivity {
 
         public class ViewHolder7 extends RecyclerView.ViewHolder{
 
+            ConstraintLayout ConsllouttoDetails;
             TextView tvHT1;
             public ViewHolder7(View itemView) {
                 super(itemView);
                 tvHT1=itemView.findViewById(R.id.tvHT1);
+                ConsllouttoDetails=itemView.findViewById(R.id.ConsllouttoDetails);
             }
         }
     }

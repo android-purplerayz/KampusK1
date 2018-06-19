@@ -14,8 +14,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_secondary_edu_logo" />
-                            <entry key="sourceFile" value="C:\Users\android 2\Desktop\SVG\secondary_edu_logo.svg" />
+                            <entry key="height" value="502" />
+                            <entry key="outputName" value="ic_award_logo" />
+                            <entry key="overrideSize" value="true" />
+                            <entry key="sourceFile" value="C:\Users\android 2\Desktop\SVG\award_logo.svg" />
+                            <entry key="width" value="502" />
                           </map>
                         </option>
                       </PersistentState>

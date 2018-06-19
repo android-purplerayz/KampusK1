@@ -27,6 +27,7 @@
     <string name="title_activity_exam_results_adaptrer">ExamResultsAdaptrer</string>
     <string name="title_activity_scholership">ScholershipActivity</string>
     <string name="title_activity_health_tips">HealthTipsActivity</string>
+    <string name="title_activity_career">CareerActivity</string>
 
 
 </resources>
