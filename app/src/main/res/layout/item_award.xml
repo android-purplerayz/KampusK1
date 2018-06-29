@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#4FBAA7"
-        app:layout_constraintBottom_toTopOf="@+id/tvAward2"
+        app:layout_constraintBottom_toTopOf="@+id/tvAwardTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/tvaward1"
+            android:id="@+id/tvAnameORG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -55,7 +55,7 @@
 
 
         <TextView
-            android:id="@+id/tvAward2"
+            android:id="@+id/tvAwardTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -67,8 +67,8 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvAward3"
-            android:layout_below="@+id/tvAward2"
+            android:id="@+id/tvAwardFor"
+            android:layout_below="@+id/tvAwardTitle"
             android:layout_marginTop="5dp"
             android:drawablePadding="10dp"
             android:paddingLeft="10dp"
@@ -80,14 +80,14 @@
             android:textColor="#135864" />
 
         <TextView
-            android:id="@+id/tvAward4"
+            android:id="@+id/tvAwardYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20 March 2017"
             android:layout_marginTop="5dp"
             android:paddingLeft="10dp"
             android:layout_toRightOf="@+id/imageAward1"
-            android:layout_below="@+id/tvAward3"
+            android:layout_below="@+id/tvAwardFor"
             android:textColor="#135864" />
 
 

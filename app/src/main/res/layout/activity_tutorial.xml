@@ -81,6 +81,7 @@
                 android:background="#1B9BAC"
                 android:id="@+id/buttonSkip"
                 android:text="Skip"
+                android:textAllCaps="false"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>

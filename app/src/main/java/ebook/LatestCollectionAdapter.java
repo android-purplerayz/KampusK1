@@ -18,32 +18,33 @@ import java.util.HashMap;
 
 public class LatestCollectionAdapter  extends RecyclerView.Adapter<LatestCollectionAdapter.ViewHolder> {
 
-    ArrayList<HashMap<String, String>> mData;
+    ArrayList<ModelData> mData;
     private LayoutInflater mInflater;
     private Context c;
 
 
-    public LatestCollectionAdapter(Context context,  ArrayList<HashMap<String, String>> data) {
+    public LatestCollectionAdapter(Context context,   ArrayList<ModelData> data) {
         if(context!=null) {
             this.mInflater = LayoutInflater.from(context);
             this.mData = data;
             this.c = context;
+
         }
     }
 
     @NonNull
     @Override
-    public LatestCollectionAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.row_latest_collection_list, parent, false);
-        return new LatestCollectionAdapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LatestCollectionAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.pos = position;
 
-        holder.cat_name.setText(mData.get(position).get("cat"));
-        String img_link = mData.get(position).get("img");
+        holder.cat_name.setText(mData.get(position).getTitle());
+        String img_link = mData.get(position).getEbook_image();
 
         Glide.with(c).load(img_link).into(holder.img);
     }

@@ -19,6 +19,7 @@ public class ServicePlayVideosActivity extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
 
+    private  String VIDEO_URL;
     private MediaController mediaControls;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class ServicePlayVideosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_service_play_videos);
 
 
+        VIDEO_URL = getIntent().getExtras().getString("Video_URL");
 
 
         if (mediaControls == null) {
@@ -74,7 +76,7 @@ public class ServicePlayVideosActivity extends AppCompatActivity {
 
             //set the uri of the video to be played
 
-            playVideoView.setVideoURI(Uri.parse("http://techslides.com/demos/sample-videos/small.webm"));
+            playVideoView.setVideoURI(Uri.parse(VIDEO_URL));
 
 
 

@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.android2.kampuskannekt.R;
-import com.example.android2.kampuskannekt.ServicesActivity;
 
 public class TeacherMainMenu extends AppCompatActivity {
 
@@ -21,7 +20,7 @@ public class TeacherMainMenu extends AppCompatActivity {
         btngotoservice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TeacherMainMenu.this,ServicesActivity.class));
+                onBackPressed();
             }
         });
     }

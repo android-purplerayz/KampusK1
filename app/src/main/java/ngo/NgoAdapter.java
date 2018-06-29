@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.android2.kampuskannekt.R;
 
 import java.util.ArrayList;
@@ -17,12 +18,12 @@ import java.util.HashMap;
 
 public class NgoAdapter  extends RecyclerView.Adapter<NgoAdapter.ViewHolder> {
 
-    ArrayList<HashMap<String, String>> mData;
+    ArrayList<ModelNgoData> mData;
     private LayoutInflater mInflater;
     private Context c;
 
 
-    public NgoAdapter(Context context,  ArrayList<HashMap<String, String>> data) {
+    public NgoAdapter(Context context,  ArrayList<ModelNgoData> data) {
         if(context!=null) {
             this.mInflater = LayoutInflater.from(context);
             this.mData = data;
@@ -41,7 +42,12 @@ public class NgoAdapter  extends RecyclerView.Adapter<NgoAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull NgoAdapter.ViewHolder holder, int position) {
         holder.pos = position;
 
-        holder.cat_name.setText(mData.get(position).get("cat"));
+        holder.cat_name.setText(mData.get(position).getNgo_title());
+        holder.cat_address.setText(mData.get(position).getNgo_address());
+        holder.tv_rating.setText(mData.get(position).getNgo_rating());
+
+        String imglink=mData.get(position).getNgo_img();
+        Glide.with(c).load(imglink).into(holder.img);
 
     }
 
@@ -52,7 +58,7 @@ public class NgoAdapter  extends RecyclerView.Adapter<NgoAdapter.ViewHolder> {
 
 
     public class ViewHolder extends RecyclerView.ViewHolder  {
-        TextView cat_name;
+        TextView cat_name, cat_address, tv_rating;
         ImageView img, img_cat_icon;
         int pos;
 
@@ -61,11 +67,14 @@ public class NgoAdapter  extends RecyclerView.Adapter<NgoAdapter.ViewHolder> {
             img = itemView.findViewById(R.id.img_cat);
             cat_name  = itemView.findViewById(R.id.cat_name);
             img_cat_icon  = itemView.findViewById(R.id.img_cat_icon);
+            cat_address = itemView.findViewById(R.id.cat_address);
+            tv_rating = itemView.findViewById(R.id.tv_rating);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent i = new Intent(c , NgoDetails.class);
+                    i.putExtra("MyClass", mData.get(pos));
                     c.startActivity(i);
                 }
             });

@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".ParenMsgFragment.RecentFragment">
 
-    <!-- TODO: Update blank fragment layout -->
    <android.support.v7.widget.RecyclerView
        android:padding="10dp"
        android:layout_width="match_parent"

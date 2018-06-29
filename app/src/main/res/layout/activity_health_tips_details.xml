@@ -73,8 +73,8 @@
                    app:layout_constraintTop_toTopOf="parent" />
 
                <TextView
-                   android:id="@+id/tv1"
-                   android:layout_width="wrap_content"
+                   android:id="@+id/tvTitle"
+                   android:layout_width="280dp"
                    android:layout_height="wrap_content"
                    android:layout_alignParentTop="true"
                    android:layout_alignParentEnd="true"
@@ -88,8 +88,10 @@
                    android:text="Health and Wellness Tips for College "
                    android:textColor="#014D59"
                    android:textStyle="bold"
+                   app:layout_constraintRight_toRightOf="parent"
                    app:layout_constraintBottom_toBottomOf="parent"
                    app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintLeft_toRightOf="parent"
                    app:layout_constraintHorizontal_bias="0.0"
                    app:layout_constraintStart_toEndOf="@+id/imageView3"
                    app:layout_constraintTop_toTopOf="parent"
@@ -99,8 +101,8 @@
                    android:id="@+id/tv2"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:layout_alignStart="@+id/tv1"
-                   android:layout_alignLeft="@+id/tv1"
+                   android:layout_alignStart="@+id/tvTitle"
+                   android:layout_alignLeft="@+id/tvTitle"
                    android:layout_centerVertical="true"
                    android:layout_marginStart="8dp"
                    android:layout_marginLeft="8dp"
@@ -112,14 +114,14 @@
                    android:textColor="#014D59"
                    android:textStyle="bold"
                    app:layout_constraintBottom_toBottomOf="parent"
-                   app:layout_constraintEnd_toStartOf="@+id/tv3"
+                   app:layout_constraintEnd_toStartOf="@+id/tvDate"
                    app:layout_constraintHorizontal_bias="0.0"
                    app:layout_constraintStart_toEndOf="@+id/imageView3"
-                   app:layout_constraintTop_toBottomOf="@+id/tv1"
+                   app:layout_constraintTop_toBottomOf="@+id/tvTitle"
                    app:layout_constraintVertical_bias="0.521" />
 
                <TextView
-                   android:id="@+id/tv3"
+                   android:id="@+id/tvDate"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:layout_below="@+id/tv2"
@@ -132,34 +134,35 @@
                    android:text="Date: 18/06/2018"
                    app:layout_constraintBottom_toBottomOf="parent"
                    app:layout_constraintEnd_toEndOf="parent"
-                   app:layout_constraintTop_toBottomOf="@+id/tv1" />
+                   app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
             </android.support.constraint.ConstraintLayout>
-            <RelativeLayout
-                android:id="@+id/relloutHTD1"
+            <ImageView
+                android:id="@+id/imageHTD"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:scaleType="fitXY"
                 app:layout_constraintTop_toBottomOf="@+id/relloutHTD"
-                android:background="@drawable/stethos">
+                android:src="@drawable/stethos">
 
-            </RelativeLayout>
+            </ImageView>
             <RelativeLayout
                 android:id="@+id/relloutHTD2"
-                app:layout_constraintTop_toBottomOf="@+id/relloutHTD1"
+                app:layout_constraintTop_toBottomOf="@+id/imageHTD"
                 android:layout_width="match_parent"
                 android:padding="10dp"
                 android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_marginTop="10dp"
-                    android:id="@+id/tv9"
+                    android:id="@+id/tvShortDes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo. Luctus arcu, urna praesent at id quisque ac."/>
 
                 <TextView
                     android:layout_marginTop="15dp"
-                    android:layout_below="@id/tv9"
+                    android:layout_below="@id/tvShortDes"
                     android:id="@+id/tv91"
                     android:textStyle="bold"
                     android:layout_width="match_parent"
@@ -168,27 +171,11 @@
 
                 <TextView
                     android:layout_marginTop="10dp"
-                    android:id="@+id/tv92"
+                    android:id="@+id/tvlongDes"
                     android:layout_below="@+id/tv91"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="vestibulum malesuada, integer vivamus elit eu mauris eus, cum eros quis aliquam wisi"/>
-
-                <TextView
-                    android:layout_marginTop="15dp"
-                    android:id="@+id/tv93"
-                    android:layout_below="@+id/tv92"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="Nulla wisi"/>
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/tv94"
-                    android:layout_below="@+id/tv93"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="laoreet suspendisse integer vivamus elit eu mauris hendrerit facilisi, mi mattis pariatur aliquam pharetra eget."/>
 
             </RelativeLayout>
 

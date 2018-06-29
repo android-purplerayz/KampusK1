@@ -25,6 +25,7 @@
                 android:background="@drawable/ic_left_arrow_profile"
                 android:layout_alignParentLeft="true" />
             <TextView
+                android:id="@+id/tv_Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -60,7 +61,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/img_bannerED"
+                android:id="@+id/examResImage"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:scaleType="centerCrop"
@@ -80,7 +81,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
                 android:rotation="180"
-                app:layout_constraintBottom_toBottomOf="@+id/img_bannerED"
+                app:layout_constraintBottom_toBottomOf="@+id/examResImage"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +101,7 @@
                 android:background="#51BCA9"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_bannerED" />
+                app:layout_constraintTop_toBottomOf="@+id/examResImage" />
 
             <ImageView
                 android:id="@+id/img_infoED"
@@ -119,7 +120,7 @@
                 app:layout_constraintHorizontal_bias="0.025"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.396" />
+                app:layout_constraintVertical_bias="0.4" />
 
             <RelativeLayout
                 android:id="@+id/rl1ED"
@@ -167,7 +168,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tv_addressED"
+                    android:id="@+id/tv_XRsubject"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_loc"
@@ -298,7 +299,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tv_processED"
+                    android:id="@+id/tv_Guidline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_prosED"

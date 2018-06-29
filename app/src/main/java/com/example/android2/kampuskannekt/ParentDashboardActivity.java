@@ -6,12 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import com.example.android2.kampuskannekt.Transport.PickupDrop;
 
 public class ParentDashboardActivity extends AppCompatActivity {
 
 
     private Button btndasdMSG,btndasdEmail,btndashgotoMainmenu;
     private LinearLayout LloutRequestID,llout_notic,lloutabuse;
+    private RelativeLayout relativeTransport;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +24,14 @@ public class ParentDashboardActivity extends AppCompatActivity {
         LloutRequestID=(LinearLayout) findViewById(R.id.LloutRequestID);
         llout_notic=(LinearLayout) findViewById(R.id.llout_notic);
         lloutabuse=(LinearLayout) findViewById(R.id.lloutabuse);
+        relativeTransport= findViewById(R.id.relativeTransport);
+
+        relativeTransport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ParentDashboardActivity.this,PickupDrop.class));
+            }
+        });
 
         lloutabuse.setOnClickListener(new View.OnClickListener() {
             @Override

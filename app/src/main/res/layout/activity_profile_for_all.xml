@@ -6,19 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ProfileForAllActivity">
 
-
-
-
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/relative_llout1"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="#0E6672"
-        android:orientation="horizontal"
-        android:layout_alignParentLeft="true">
-
+            android:id="@+id/relative_llout1"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#0E6672"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true">
 
         <Button
             android:id="@+id/buttonBack"
@@ -100,7 +96,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:background="#70FFFFFF"
+            android:background="#90FFFFFF"
             android:layout_height="match_parent">
 
 
@@ -113,6 +109,7 @@
             android:layout_marginTop="24dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageSave"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 app:civ_border_width="1dp"
@@ -121,6 +118,7 @@
                 android:src="@drawable/photo_service" />
 
             <Button
+                android:id="@+id/btnCapture"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_gravity="right|bottom"
@@ -138,49 +136,65 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="20dp"
+                android:layout_alignParentLeft="true">
 
                 <EditText
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/etProName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/profile_et_background"
                     android:gravity="center"
-                    android:background="@drawable/profile_et_background"
-                    android:hint="Adity Roa"
-                    android:textColor="@android:color/white"
-                    android:textColorHint="@android:color/white" />
+                    android:hint="Enter your name"
+                    android:textColor="#135864"
+                    android:textColorHint="#135864" />
 
                 <EditText
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/etProNumber"
                     android:layout_width="match_parent"
-                    android:background="@drawable/profile_et_background"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/profile_et_background"
                     android:gravity="center"
                     android:hint="7908974084"
-                    android:textColor="@android:color/white"
-                    android:textColorHint="@android:color/white" />
+                    android:textColor="#135864"
+                    android:textColorHint="#135864" />
 
                 <EditText
+                    android:id="@+id/etProEmail"
                     android:layout_width="match_parent"
-                    android:layout_marginTop="10dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/profile_et_background"
                     android:gravity="center"
-                    android:hint="Adity@purpleRayz.com"
-                    android:textColor="@android:color/white"
-                    android:textColorHint="@android:color/white" />
-
-
+                    android:hint="Aditya@purpleRayz.com"
+                    android:textColor="#135864"
+                    android:textColorHint="#135864"  />
             </LinearLayout>
 
 
         </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnupdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:text="Update"
+                android:background="#0E6672"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:layout_alignParentLeft="true" />
         </RelativeLayout>
 
 
     </RelativeLayout>
-
 
 
 </RelativeLayout>

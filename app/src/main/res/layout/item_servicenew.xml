@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/serviceCons"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lloutSnU"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvCounter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="400"
+            android:background="@drawable/rec_service_back"
+            android:textColor="#135864"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+
+            android:id="@+id/relacolourChange"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#25C8CE"
+            >
+
+            <TextView
+                android:id="@+id/tvserviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="10dp"
+                android:text="School and University"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/service_text_size" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relaiconSchonUni"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circle_btn_shadow"
+        app:layout_constraintBottom_toBottomOf="@+id/lloutSnU"
+        app:layout_constraintLeft_toLeftOf="@+id/lloutSnU"
+        app:layout_constraintRight_toRightOf="@+id/lloutSnU"
+        app:layout_constraintTop_toTopOf="@+id/lloutSnU">
+
+        <ImageView
+            android:id="@+id/logoService"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="50dp"
+            android:src="@drawable/online_stud" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

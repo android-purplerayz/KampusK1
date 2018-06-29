@@ -2,8 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android2.kampuskannekt">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -30,7 +41,6 @@
         <activity android:name=".ParentChatActivity" />
         <activity android:name=".SchoolLoginActivity" />
         <activity android:name=".ParrentMessageActivity" />
-        <activity android:name=".ServicesActivity" />
         <activity android:name=".ParentRequestActivity" />
         <activity android:name=".ParentEmailActivity" />
         <activity android:name=".ParentManiMenuActivity" />
@@ -63,11 +73,29 @@
             android:label="@string/title_activity_health_tips"
             android:theme="@style/AppTheme" />
         <activity android:name=".HealthTips.HealthTipsDetailsActivity" />
+        <activity android:name=".Award.AwardActivity" />
+        <activity android:name=".education_loan.EducationalLoan" />
+        <activity android:name=".education_loan.EducationLoanDetails" />
+        <activity android:name=".TalentHunt.Talenthunt" />
+        <activity android:name=".TalentHunt.TalentHuntDetails" />
         <activity
-            android:name=".Career.CareerActivity"
-            android:label="@string/title_activity_career"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".Award.AwardActivity"></activity>
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.schoolerp.kampuskonnekt.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path_img" />
+        </provider>
+
+        <activity android:name=".Transport.PickupDrop" />
+        <activity android:name=".ServicesNewActivity" />
+        <activity android:name=".BlogActivity" />
+        <activity android:name=".ERPActivity"></activity>
     </application>
 
 </manifest>

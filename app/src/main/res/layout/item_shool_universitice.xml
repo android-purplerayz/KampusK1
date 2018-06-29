@@ -11,13 +11,14 @@
 
     <TextView
         android:id="@+id/tvSchoolName"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="Oxford School"
+        android:text="Ambedkar public school,Netaji subham chandra bose"
         android:textColor="#135864"
         android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@+id/tvRat"
         app:layout_constraintStart_toEndOf="@+id/imageViewSchool"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,7 +52,8 @@
         android:layout_height="25dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:background="#135864"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/tv_date"
         android:gravity="center"
         android:text="CBSE"
         android:textColor="@android:color/white"
@@ -66,15 +68,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:maxLength="35"
-        android:textSize="12dp"
-        android:layout_marginTop="20dp"
         android:text="33 Marlin Matrix,DN 10,Sector V..."
         android:textColor="#08935d"
+        android:textSize="12dp"
         app:layout_constraintStart_toEndOf="@+id/imageViewSchool"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
+        android:id="@+id/tvRat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

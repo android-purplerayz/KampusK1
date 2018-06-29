@@ -14,7 +14,132 @@
         android:layout_height="match_parent" />
 
     <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
+        android:id="@+id/nav_viewVideos"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:fitsSystemWindows="false"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/ic_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_close"
+                android:layout_alignBottom="@+id/category"
+                android:layout_marginRight="20dp"
+                />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cccccc"
+                android:layout_below="@+id/category"
+                android:layout_marginTop="20dp"
+
+                />
+
+            <Spinner
+                android:id="@+id/spinnerSType"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/view1"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+
+                />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_below="@+id/spinnerSType"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerStopic"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/view2"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+
+                />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_below="@+id/spinnerStopic"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                />
+            <Spinner
+                android:id="@+id/spinnerSsub"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/view3"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+
+                />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_below="@+id/spinnerSsub"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                />
+
+
+
+            <Button
+                android:id="@+id/btnsearchV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_search"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                />
+
+        </RelativeLayout>
+
+
+    </android.support.design.widget.NavigationView>
+   <!-- <android.support.design.widget.NavigationView
+        android:id="@+id/nav_viewVideos"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="end"
@@ -75,7 +200,7 @@
                 android:padding="7dp">
 
                 <Spinner
-                    android:id="@+id/spinnerstuType"
+                    android:id="@+id/spinnerSType"
                     android:layout_width="250dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -84,7 +209,7 @@
                 </Spinner>
 
                 <Spinner
-                    android:id="@+id/spinnerstuSubject"
+                    android:id="@+id/spinnerStopic"
                     android:layout_width="250dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -92,7 +217,7 @@
                 </Spinner>
 
                 <Spinner
-                    android:id="@+id/spinnerstuTopic"
+                    android:id="@+id/spinnerSsub"
                     android:layout_width="250dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -103,7 +228,7 @@
 
 
             <Button
-                android:id="@+id/btnsearch"
+                android:id="@+id/btnsearchV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -115,7 +240,7 @@
                 android:textColor="@android:color/white" />
         </RelativeLayout>
 
-    </android.support.design.widget.NavigationView>
+    </android.support.design.widget.NavigationView>-->
 
 
 </android.support.v4.widget.DrawerLayout>

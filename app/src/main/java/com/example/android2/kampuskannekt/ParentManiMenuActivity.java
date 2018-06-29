@@ -10,13 +10,21 @@ import android.widget.LinearLayout;
 public class ParentManiMenuActivity extends AppCompatActivity {
 
     private Button btngotoDashboard,btngotoservice;
-    private LinearLayout lloutclassnotes,lloutparentfees;
+    private LinearLayout lloutclassnotes,lloutparentfees,lloutStuProfile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parent_mani_menu);
         lloutclassnotes=findViewById(R.id.lloutclassnotes);
+        lloutStuProfile=findViewById(R.id.lloutStuProfile);
         lloutparentfees=findViewById(R.id.lloutparentfees);
+
+        lloutStuProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ParentManiMenuActivity.this,ParentStuInfoActivity.class));
+            }
+        });
         lloutparentfees.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +44,7 @@ public class ParentManiMenuActivity extends AppCompatActivity {
         btngotoservice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ParentManiMenuActivity.this,ServicesActivity.class));
+                startActivity(new Intent(ParentManiMenuActivity.this,ServicesNewActivity.class));
             }
         });
 

@@ -17,12 +17,12 @@ import java.util.HashMap;
 
 public class StudentCollectionAdapter extends RecyclerView.Adapter<StudentCollectionAdapter.ViewHolder> {
 
-    ArrayList<HashMap<String, String>> mData;
+    ArrayList<ModelData> mData;
     private LayoutInflater mInflater;
     private Context c;
 
 
-    public StudentCollectionAdapter(Context context,  ArrayList<HashMap<String, String>> data) {
+    public StudentCollectionAdapter(Context context,  ArrayList<ModelData> data) {
         if(context!=null) {
             this.mInflater = LayoutInflater.from(context);
             this.mData = data;
@@ -32,17 +32,17 @@ public class StudentCollectionAdapter extends RecyclerView.Adapter<StudentCollec
 
     @NonNull
     @Override
-    public StudentCollectionAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.row_student_collection_list, parent, false);
-        return new StudentCollectionAdapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull StudentCollectionAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.pos = position;
 
-        holder.cat_name.setText(mData.get(position).get("cat"));
-        String img_link = mData.get(position).get("img");
+        holder.cat_name.setText(mData.get(position).getTitle());
+        String img_link = mData.get(position).getEbook_image();
 
         Glide.with(c).load(img_link).into(holder.img);
     }

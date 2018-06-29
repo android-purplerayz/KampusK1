@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/login_background"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
 
 
     <ImageView
@@ -17,6 +22,7 @@
         android:layout_marginTop="100dp"
         android:src="@drawable/login_logo" />
     <EditText
+        android:id="@+id/etLoginMobile"
         android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -52,5 +58,7 @@
         android:layout_marginRight="25dp"
         android:background="@drawable/ic_floating_back_logo"
         android:layout_gravity="bottom|right"/>
+    </LinearLayout>
 
-</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

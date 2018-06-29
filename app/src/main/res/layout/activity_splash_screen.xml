@@ -6,6 +6,4 @@
     android:background="@drawable/splash"
     android:layout_height="match_parent"
     tools:context=".SplashScreenActivity">
-
-
 </android.support.constraint.ConstraintLayout>

@@ -4,6 +4,7 @@ package epaper;
  * Created by ANDROID on 9/19/2017.
  */
 
+import android.app.DownloadManager;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.example.android2.kampuskannekt.R;
 
@@ -21,12 +28,14 @@ import java.util.HashMap;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
 
-    ArrayList<HashMap<String, String>>  mData;
+
+
+    ArrayList<ModelEpaperData>  mData;
     private LayoutInflater mInflater;
     private Context c;
 
 
-    public CategoryAdapter(Context context,  ArrayList<HashMap<String, String>> data) {
+    public CategoryAdapter(Context context,  ArrayList<ModelEpaperData> data) {
         if(context!=null) {
             this.mInflater = LayoutInflater.from(context);
             this.mData = data;
@@ -36,18 +45,18 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
     @NonNull
     @Override
-    public CategoryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.row_epaper_list, parent, false);
-        return new CategoryAdapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.pos = position;
 
-        holder.cat_name.setText(mData.get(position).get("cat"));
+        holder.cat_name.setText(mData.get(position).getTitle());
 
-        String img_link = mData.get(position).get("img");
+        String img_link = mData.get(position).getEpaper_image();
 
         Glide.with(c).load(img_link).into(holder.img);
 

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Transport.PickupDrop">
+
+   <android.support.v7.widget.Toolbar
+       android:layout_width="match_parent"
+       android:background="#0E6672"
+       android:id="@+id/toolbarPnD"
+       android:layout_height="wrap_content">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+
+           <Button
+               android:id="@+id/btnPnDBack"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:background="@drawable/ic_drawer_button_icon"
+               />
+
+           <TextView
+               android:id="@+id/textViewPFess"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentTop="true"
+               android:layout_marginStart="135dp"
+               android:layout_marginLeft="135dp"
+               android:layout_marginTop="4dp"
+               android:gravity="center"
+               android:layout_centerVertical="true"
+               android:layout_centerHorizontal="true"
+               android:text="Pickup and Drop"
+               android:textColor="@android:color/white"
+               android:textSize="18dp" />
+
+           <TextView
+               android:id="@+id/tvPnDnotify"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignLeft="@+id/btnPnDnoti"
+               android:layout_alignParentTop="true"
+               android:layout_marginLeft="-8dp"
+               android:background="@drawable/notify_tv_background"
+               android:gravity="center"
+               android:text="05"
+               android:textColor="@android:color/white"
+               android:textSize="12dp" />
+
+           <Button
+               android:id="@+id/btnPnDnoti"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_alignParentTop="true"
+               android:layout_marginLeft="269dp"
+               android:layout_marginTop="0dp"
+               android:layout_alignParentRight="true"
+               android:background="@drawable/ic_notification_logo" />
+       </RelativeLayout>
+   </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerviewPnD"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarPnD">
+
+    </android.support.v7.widget.RecyclerView>
+</android.support.constraint.ConstraintLayout>

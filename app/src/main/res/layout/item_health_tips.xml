@@ -12,31 +12,13 @@
         android:layout_width="100dp"
         android:src="@drawable/healthtips_photo"
         android:scaleType="fitXY"
-        android:layout_height="80dp">
+        android:layout_height="100dp">
 
     </ImageView>
 
     <TextView
-        android:id="@+id/tvHT1"
-        android:layout_width="246dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:lines="2"
-        android:maxLines="40"
-        android:text="Health and Wellness Tips for College "
-        android:textColor="#0E6672"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ImageHT"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="6dp" />
-
-    <TextView
-        android:id="@+id/tvHT2"
-        android:layout_width="247dp"
+        android:id="@+id/tvTitle"
+        android:layout_width="255dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -44,16 +26,39 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:lines="2"
-        android:maxLines="40"
-        android:text="Lorem ipsum dolor sit amet, sapien etiam, nunc amet dolor ac odio mauris justo."
+        android:gravity="start"
+        android:text="Health and Wellness Tips for College "
+        android:textColor="#0E6672"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ImageHT"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvShortDes"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="start"
+        android:maxLength="48"
+        android:maxLines="2"
+        android:text="Lorem ipsum dolor sit amet, sais justo."
         android:textColor="#014D59"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ImageHT"
-        app:layout_constraintTop_toBottomOf="@+id/tvExamDes"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 

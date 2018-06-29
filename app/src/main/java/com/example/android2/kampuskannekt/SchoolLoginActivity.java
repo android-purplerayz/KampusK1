@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jaredrummler.materialspinner.MaterialSpinner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,7 +23,8 @@ public class SchoolLoginActivity extends AppCompatActivity implements View.OnCli
 
     Spinner spinner1, spinner2;
     Button btn_enter;
-    String[] location=new String[]{"Select Loaction","location 1","location 2","location 3"};
+    ImageView OTPback_button;
+    String[] location=new String[]{"Select Location","location 1","location 2","location 3"};
     String[] school=new String[]{"Select School","ABC School","BCA School","CAD School"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +33,12 @@ public class SchoolLoginActivity extends AppCompatActivity implements View.OnCli
         spinner1=findViewById(R.id.spinner1);
         spinner2=findViewById(R.id.spinner2);
         btn_enter =findViewById(R.id.btn_enter);
+        OTPback_button =findViewById(R.id.OTPback_button);
 
         populateSpinner1();
         populateSpinner2();
 
 
-
-        //////////
 
 
 
@@ -48,6 +48,7 @@ public class SchoolLoginActivity extends AppCompatActivity implements View.OnCli
 
     private void setListeners(){
         btn_enter.setOnClickListener(this);
+        OTPback_button.setOnClickListener(this);
     }
 
 
@@ -57,6 +58,9 @@ public class SchoolLoginActivity extends AppCompatActivity implements View.OnCli
         case R.id.btn_enter:
             Intent i = new Intent(this, SelectInterface.class);
             startActivity(i);
+            break;
+        case R.id.OTPback_button:
+            onBackPressed();
             break;
     }
     }

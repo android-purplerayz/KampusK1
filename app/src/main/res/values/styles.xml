@@ -17,4 +17,25 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+    <style name="Custom" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogTitleText">Please wait…</item>
+        <item name="DialogSpotColor">@android:color/holo_blue_light</item>
+        <item name="DialogSpotCount">5</item>
+    </style>
+
+    <style name="Custompropic" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogTitleText">Updating Profile…</item>
+        <item name="DialogSpotColor">@android:color/holo_blue_light</item>
+        <item name="DialogSpotCount">5</item>
+    </style>
+
 </resources>

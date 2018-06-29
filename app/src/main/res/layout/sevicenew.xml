@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#0E6672"
+        android:id="@+id/tbServices"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/btnlogout"
+                android:layout_width="35dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_exit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvservice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Services"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"
+                app:layout_constraintRight_toRightOf="@+id/btnProfile"
+                app:layout_constraintLeft_toLeftOf="@+id/btnlogout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="151dp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/btnProfile"
+                style="@style/Base.DialogWindowTitleBackground.AppCompat"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/ic_user_service1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.934"
+                app:layout_constraintStart_toEndOf="@+id/tvservice"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbServices"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="0dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cons1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/p_dash_bach_photo"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#900dbfcc"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp"
+                tools:ignore="MissingConstraints">
+
+           <!-- <RelativeLayout
+                android:id="@+id/rloutsearch"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_back">
+
+                <TextView
+                    android:id="@+id/etSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="15dp"
+                    android:text="Search Services"
+                    android:textSize="14dp" />
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/ic_search" />
+            </RelativeLayout>-->
+
+            <TextView
+
+                android:id="@+id/tvEmail"
+                android:layout_marginTop="25dp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:text="biswarup@gmail.com"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_below="@+id/tvEmail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:id="@+id/cimageUSER"
+                android:layout_width="100dp"
+                android:src="@drawable/photo_service"
+                android:layout_height="100dp"
+                app:civ_border_color="@android:color/black"
+                app:civ_border_overlay="true"
+                app:civ_border_width="1dp"
+                />
+            <TextView
+                android:id="@+id/tvuname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:text="User's Name"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/cimageUSER"/>
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llout1"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+        <RelativeLayout
+            android:id="@+id/rloutERP"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="@drawable/blog_erp_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:id="@+id/iamgeErp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_erp"/>
+            <TextView
+                android:id="@+id/tverp"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ERP"
+                android:layout_below="@+id/iamgeErp"
+                android:textSize="18dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:id="@+id/rloutBLOG"
+            android:background="@drawable/blog_erp_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:id="@+id/iamgeBlog"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_blogger"/>
+            <TextView
+                android:layout_marginTop="2dp"
+                android:id="@+id/tvblog"
+                android:layout_below="@+id/iamgeBlog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blog"
+                android:textSize="18dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#135864"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cons1" />
+
+    <RelativeLayout
+        android:id="@+id/rloutEnterSchool"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:background="@drawable/enter_school_back"
+        app:layout_constraintTop_toTopOf="@+id/view1"
+        app:layout_constraintBottom_toBottomOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter School"
+            android:textColor="#3a8896"
+            android:gravity="right"
+            android:textSize="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/ic_enter_school_logo"/>
+    </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerviewSerVicesnew"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/llout1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="0dp">
+        </android.support.v7.widget.RecyclerView>
+</android.support.constraint.ConstraintLayout>
+
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progService"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>
